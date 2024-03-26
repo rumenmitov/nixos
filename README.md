@@ -1,0 +1,2 @@
+# nixos
+NIXOS config❄️
