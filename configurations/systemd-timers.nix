@@ -12,9 +12,7 @@
     systemd.services."system-backup" = {
         script = ''
             set -eu
-            ${pkgs.btrfs-progs}/bin/btrfs set /snapshots/home-latest ro false
-            rm -rf /snapshot/home-latest
-            ${pkgs.btrfs-progs}/bin/btrfs subvolume snapshot -r /home /snapshots/home-latest
+            ${pkgs.btrfs-progs}/bin/btrfs subvolume snapshot -r /home /snapshots/home-$(date +%s)
             '';
         serviceConfig = {
             Type = "oneshot";
