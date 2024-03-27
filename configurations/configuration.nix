@@ -45,12 +45,14 @@
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
 
+  hardware.opentabletdriver.enable = true;
+
+  services.udev.extraRules = "";
+
   services.blueman.enable = true;
 
   services.xserver.libinput.enable = true;
 
-
-  programs.mtr.enable = true;
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;

@@ -20,6 +20,7 @@
       kdePackages.okular
       vlc
       qview
+      rnote
 
       # Neovim
       neovim
