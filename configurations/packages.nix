@@ -13,6 +13,8 @@
     rustup
     go
     nodejs_21
+    ffmpeg
+    imagemagick
     git
     ghc
     unzip
