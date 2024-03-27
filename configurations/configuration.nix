@@ -4,6 +4,7 @@
   imports =
     [ 
       ./hardware-configuration.nix
+      ./systemd-timers.nix
       ./packages.nix
       ./users.nix
     ];
