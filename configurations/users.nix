@@ -16,6 +16,10 @@
       nextcloud-client
       logseq
       joplin-desktop
+      libreoffice-fresh
+      kdePackages.okular
+      vlc
+      qview
 
       # Neovim
       neovim
