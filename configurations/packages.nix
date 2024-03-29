@@ -35,6 +35,7 @@
     xdg-utils
     dunst
     libnotify
+    htop
     dbus
     xdg-desktop-portal
     xdg-desktop-portal-gtk
