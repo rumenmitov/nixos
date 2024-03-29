@@ -39,10 +39,8 @@
       # Hyprland
       hyprcursor
       hyprlock
-      rofi-power-menu
       wl-clipboard
-      rofimoji
-      rofi
+      rofi-wayland
       slurp
       grim
       swww
