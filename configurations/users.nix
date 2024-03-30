@@ -24,6 +24,7 @@
 
       # Neovim
       neovim
+      texliveFull
 
       # Terminal
       fish
