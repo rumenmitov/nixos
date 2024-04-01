@@ -17,6 +17,7 @@
       logseq
       joplin-desktop
       libreoffice-fresh
+      element-desktop
       kdePackages.okular
       vlc
       qview

@@ -42,6 +42,11 @@
   sound.enable = true;
   hardware.pulseaudio.enable = true;
 
+  services.pipewire = {
+      enable = true;
+      wireplumber.enable = true;
+  };
+
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
 
