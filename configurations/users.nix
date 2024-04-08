@@ -30,6 +30,7 @@
       # Terminal
       fish
       lsd
+      tree
       ripgrep
       bat
       tty-clock
