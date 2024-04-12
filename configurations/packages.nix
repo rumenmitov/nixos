@@ -3,48 +3,48 @@
   programs.fish.enable = true;
 
   environment.systemPackages = with pkgs; [
-    vim 
-    wget
-    curl
-    lsof
-    gcc
+    alacritty
+    brightnessctl
     clang-tools
     cmake
-    rustup
-    go
-    nodejs_21
+    curl
+    dbus
+    dunst
     ffmpeg
-    imagemagick
-    git
-    ghc
-    unzip
     file
-    alacritty
-    hackgen-nf-font
+    gcc
+    ghc
+    cabal-install
+    git
     glib
     glibc
     gnumake
+    go
+    hackgen-nf-font
+    htop
+    imagemagick
+    libnotify
+    libsForQt5.qt5.qtgraphicaleffects
+    lsof
     man-db
     man-pages
     man-pages-posix
-
-    sddm
-    libsForQt5.qt5.qtgraphicaleffects
-    pamixer
-    brightnessctl
-    xdg-utils
-    dunst
-    libnotify
-    htop
-    dbus
-    xdg-desktop-portal
-    xdg-desktop-portal-gtk
-    xwayland
-    polkit
     meson
+    nodejs_21
+    pamixer
+    polkit
+    rustup
+    sddm
+    unzip
+    vim 
     wayland-protocols
     wayland-utils
+    wget
     wl-clipboard
     wlroots
+    xdg-desktop-portal
+    xdg-desktop-portal-gtk
+    xdg-utils
+    xwayland
   ];
 }

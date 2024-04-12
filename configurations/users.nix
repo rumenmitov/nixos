@@ -3,7 +3,7 @@
   users.users.rumen = {
     isNormalUser = true;
     shell = pkgs.fish;
-    extraGroups = [ "wheel" ]; 
+    extraGroups = [ "wheel" "libvirtd" ]; 
     packages = with pkgs; [
       librewolf
       firefox
