@@ -15,7 +15,7 @@
           efi.canTouchEfiVariables = true;
           grub.device = "nodev";
       };
-      cleanTmpDir = true;
+      tmp.cleanOnBoot = true;
   };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
