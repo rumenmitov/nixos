@@ -5,6 +5,7 @@
   environment.systemPackages = with pkgs; [
     alacritty
     brightnessctl
+    cabal-install
     clang-tools
     cmake
     curl
@@ -14,7 +15,6 @@
     file
     gcc
     ghc
-    cabal-install
     git
     glib
     glibc
@@ -26,6 +26,7 @@
     libnotify
     libsForQt5.qt5.qtgraphicaleffects
     lsof
+    lua-language-server
     man-db
     man-pages
     man-pages-posix
