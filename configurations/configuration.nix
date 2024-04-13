@@ -9,14 +9,26 @@
       ./users.nix
     ];
 
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.grub.device = "nodev";
+  boot = {
+      loader = {
+          systemd-boot.enable = true;
+          efi.canTouchEfiVariables = true;
+          grub.device = "nodev";
+      };
+      cleanTmpDir = true;
+  };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  networking.hostName = "black-eagle";
-  networking.networkmanager.enable = true;  
+  networking = {
+      hostName = "black-eagle";
+      networkmanager.enable = true;  
+      firewall = {
+          allowedTCPPorts = [  ];
+          allowedUDPPorts = [  ];
+          enable = true;
+      };
+  };
 
   time.timeZone = "Europe/Luxembourg";
 
@@ -64,10 +76,6 @@
   };
 
   services.openssh.enable = true;
-
-  networking.firewall.allowedTCPPorts = [  ];
-  networking.firewall.allowedUDPPorts = [  ];
-  networking.firewall.enable = true;
 
   system.copySystemConfiguration = false;
 
