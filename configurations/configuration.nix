@@ -37,13 +37,14 @@
     wlr.enable = true;
   };
 
+  services.displayManager.sddm = {
+          enable = true;
+          theme = "${import ./sddm-theme.nix {inherit pkgs;} }";
+          wayland.enable = true;
+  };
+
   services.xserver = {
     enable = true;
-    displayManager.sddm = {
-      enable = true;
-      theme = "${import ./sddm-theme.nix {inherit pkgs;} }";
-      wayland.enable = true;
-    };
     excludePackages = [ pkgs.xterm ];
   };
 
