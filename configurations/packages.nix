@@ -21,6 +21,7 @@
     gnumake
     go
     hackgen-nf-font
+    haskell-language-server
     htop
     imagemagick
     libnotify
