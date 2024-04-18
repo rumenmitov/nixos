@@ -16,6 +16,7 @@
           grub.device = "nodev";
       };
       tmp.cleanOnBoot = true;
+      initrd.kernelModules = [ "amdgpu" ];
   };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -46,6 +47,7 @@
   services.xserver = {
     enable = true;
     excludePackages = [ pkgs.xterm ];
+    videoDrivers = [ "amdgpu" ];
   };
 
   programs.hyprland.enable = true;
