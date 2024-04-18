@@ -27,6 +27,9 @@
       neovim
       texliveFull
 
+      # Emacs
+      emacs
+
       # Terminal
       fish
       lsd
