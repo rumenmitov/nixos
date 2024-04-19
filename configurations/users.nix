@@ -29,6 +29,8 @@
 
       # Emacs
       emacs
+      mpd
+      ghostscript
 
       # Terminal
       fish

@@ -14,6 +14,7 @@
     ffmpeg
     file
     gcc
+    gdb
     ghc
     git
     glib
