@@ -29,7 +29,6 @@
 
       # Emacs
       emacs
-      mpd
       ghostscript
 
       # Terminal
