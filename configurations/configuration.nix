@@ -35,22 +35,29 @@
 
   xdg.portal = {
     enable = true;
-    wlr.enable = true;
+#    wlr.enable = true;
+    config.common.default = "gtk";
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
 
   services.displayManager.sddm = {
           enable = true;
           theme = "${import ./sddm-theme.nix {inherit pkgs;} }";
-          wayland.enable = true;
+          # wayland.enable = true;
   };
 
   services.xserver = {
     enable = true;
     excludePackages = [ pkgs.xterm ];
     videoDrivers = [ "amdgpu" ];
+    windowManager.xmonad = {
+        enable = true; 
+        enableContribAndExtras = true; 
+        config = builtins.readFile ./xmonad.hs;
+    };
   };
 
-  programs.hyprland.enable = true;
+  # programs.hyprland.enable = true;
 
   services.printing.enable = true;
 
