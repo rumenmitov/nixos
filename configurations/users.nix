@@ -42,6 +42,7 @@
       docker-compose
       tldr
       tmux
+      stow
 
       # Hyprland
       hyprcursor
