@@ -22,6 +22,7 @@
     glibc
     gnumake
     go
+    gopls
     hackgen-nf-font
     haskell-language-server
     htop
