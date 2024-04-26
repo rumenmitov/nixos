@@ -39,8 +39,6 @@
     nodejs_21
     pamixer
     polkit
-    rust-analyzer
-    cargo
     rustup
     sddm
     unzip
