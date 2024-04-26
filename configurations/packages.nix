@@ -3,6 +3,7 @@
   programs.fish.enable = true;
 
   environment.systemPackages = with pkgs; [
+  dmenu
     virtiofsd
     alacritty
     brightnessctl
