@@ -35,7 +35,7 @@
     man-pages
     man-pages-posix
     meson
-    nodejs_21
+    nodejs
     pamixer
     polkit
     rustup
