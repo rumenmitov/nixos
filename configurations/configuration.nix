@@ -70,7 +70,7 @@
 
   services.blueman.enable = true;
 
-  services.xserver.libinput.enable = true;
+  services.libinput.enable = true;
 
   programs.gnupg.agent = {
     enable = true;
