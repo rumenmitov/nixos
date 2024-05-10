@@ -3,7 +3,6 @@
   programs.fish.enable = true;
 
   environment.systemPackages = with pkgs; [
-    virtiofsd
     alacritty
     brightnessctl
     cabal-install
@@ -17,6 +16,7 @@
     gcc
     gdb
     ghc
+    gimp
     git
     glib
     glibc
@@ -42,6 +42,7 @@
     sddm
     unzip
     vim 
+    virtiofsd
     wayland-protocols
     wayland-utils
     wget
