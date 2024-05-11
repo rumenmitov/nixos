@@ -3,9 +3,9 @@
   programs.fish.enable = true;
 
   environment.systemPackages = with pkgs; [
-  pinentry-qt
     alacritty
     brightnessctl
+    btop
     cabal-install
     clang-tools
     cmake
@@ -26,7 +26,6 @@
     gopls
     hackgen-nf-font
     haskell-language-server
-    htop
     imagemagick
     libnotify
     libsForQt5.qt5.qtgraphicaleffects
@@ -38,6 +37,7 @@
     meson
     nodejs
     pamixer
+    pinentry-qt
     polkit
     rustup
     sddm
