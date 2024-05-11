@@ -11,7 +11,6 @@
       pass-wayland
       gnome.nautilus
       webcord
-      nwg-look
       kdePackages.kdeconnect-kde
       nextcloud-client
       logseq
