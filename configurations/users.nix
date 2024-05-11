@@ -48,6 +48,7 @@
       hyprlock
       wl-clipboard
       rofi-wayland
+      rofi-pass-wayland
       slurp
       grim
       swww
