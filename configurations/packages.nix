@@ -3,6 +3,7 @@
   programs.fish.enable = true;
 
   environment.systemPackages = with pkgs; [
+  pinentry-qt
     alacritty
     brightnessctl
     cabal-install
