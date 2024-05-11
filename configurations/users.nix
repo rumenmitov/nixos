@@ -27,7 +27,7 @@
       texliveFull
 
       # Emacs
-      emacs
+      emacs-gtk
       ghostscript
 
       # Terminal
