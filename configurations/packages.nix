@@ -41,6 +41,7 @@
     pamixer
     pinentry-qt
     polkit
+    rofi
     rustup
     sddm
     shutter

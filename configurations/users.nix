@@ -10,7 +10,6 @@
       ungoogled-chromium
       pass-wayland
       gnome.nautilus
-      webcord
       kdePackages.kdeconnect-kde
       nextcloud-client
       logseq
@@ -42,17 +41,6 @@
       tldr
       tmux
       stow
-
-      # Hyprland
-      hyprcursor
-      hyprlock
-      wl-clipboard
-      rofi-wayland
-      rofi-pass-wayland
-      slurp
-      grim
-      swww
-      cliphist
     ];
   };
 }
