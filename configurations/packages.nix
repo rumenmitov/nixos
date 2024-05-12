@@ -11,6 +11,7 @@
     cmake
     curl
     dbus
+    dmenu
     dunst
     ffmpeg
     file
@@ -26,6 +27,8 @@
     gopls
     hackgen-nf-font
     haskell-language-server
+    haskellPackages.greenclip
+    i3lock
     imagemagick
     libnotify
     libsForQt5.qt5.qtgraphicaleffects
@@ -35,23 +38,22 @@
     man-pages
     man-pages-posix
     meson
-    nodejs
     pamixer
     pinentry-qt
     polkit
     rustup
     sddm
+    shutter
     unzip
     vim 
     virtiofsd
-    wayland-protocols
-    wayland-utils
     wget
-    wl-clipboard
-    wlroots
+    xclip
     xdg-desktop-portal
     xdg-desktop-portal-gtk
     xdg-utils
-    xwayland
+    xmobar
+    xsel
+    xwallpaper
   ];
 }
