@@ -42,6 +42,7 @@
     pinentry-qt
     polkit
     rofi
+    rofi-pass
     rustup
     sddm
     shutter
