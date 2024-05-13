@@ -35,7 +35,6 @@
     man-pages
     man-pages-posix
     meson
-    nodejs
     pamixer
     pinentry-qt
     polkit
@@ -44,14 +43,17 @@
     unzip
     vim 
     virtiofsd
-    wayland-protocols
-    wayland-utils
     wget
-    wl-clipboard
-    wlroots
     xdg-desktop-portal
     xdg-desktop-portal-gtk
     xdg-utils
-    xwayland
+    xclip
+    shutter
+    xmobar
+    xwallpaper
+    haskellPackages.greenclip
+    rofi
+    rofi-pass
+    i3lock
   ];
 }

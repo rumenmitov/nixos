@@ -42,17 +42,6 @@
       tldr
       tmux
       stow
-
-      # Hyprland
-      hyprcursor
-      hyprlock
-      wl-clipboard
-      rofi-wayland
-      rofi-pass-wayland
-      slurp
-      grim
-      swww
-      cliphist
     ];
   };
 }

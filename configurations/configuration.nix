@@ -35,7 +35,19 @@
 
   xdg.portal = {
     enable = true;
-    wlr.enable = true;
+    configPackages = [ pkgs.xdg-desktop-portal-gtk ];
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  };
+
+  services.picom = {
+      enable = true;
+      settings = {
+          blur = {
+              method = "gaussian";
+              size = 10;
+              deviation = 5.0;
+          };
+      };
   };
 
   services.displayManager.sddm = {
@@ -47,9 +59,11 @@
     enable = true;
     excludePackages = [ pkgs.xterm ];
     videoDrivers = [ "amdgpu" ];
+    windowManager.xmonad = {
+       enable = true;
+       enableContribAndExtras = true;
+    };
   };
-
-  programs.hyprland.enable = true;
 
   services.printing.enable = true;
 
