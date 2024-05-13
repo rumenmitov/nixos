@@ -46,6 +46,7 @@
     sddm
     shutter
     unzip
+    rnix-lsp
     vim 
     virtiofsd
     wget
