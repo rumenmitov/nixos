@@ -41,13 +41,6 @@
 
   services.picom = {
       enable = true;
-      settings = {
-          blur = {
-              method = "gaussian";
-              size = 10;
-              deviation = 5.0;
-          };
-      };
   };
 
   services.displayManager.sddm = {

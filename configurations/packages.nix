@@ -26,6 +26,8 @@
     gopls
     hackgen-nf-font
     haskell-language-server
+    haskellPackages.greenclip
+    i3lock
     imagemagick
     libnotify
     libsForQt5.qt5.qtgraphicaleffects
@@ -38,22 +40,20 @@
     pamixer
     pinentry-qt
     polkit
+    rofi
+    rofi-pass
     rustup
     sddm
+    shutter
     unzip
     vim 
     virtiofsd
     wget
+    xclip
     xdg-desktop-portal
     xdg-desktop-portal-gtk
     xdg-utils
-    xclip
-    shutter
     xmobar
     xwallpaper
-    haskellPackages.greenclip
-    rofi
-    rofi-pass
-    i3lock
   ];
 }
