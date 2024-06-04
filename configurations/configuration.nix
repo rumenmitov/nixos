@@ -21,12 +21,14 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  powerManagement.enable = true;
+
   networking = {
       hostName = "black-eagle";
       networkmanager.enable = true;  
       firewall = {
-          allowedTCPPorts = [  ];
-          allowedUDPPorts = [  ];
+          allowedTCPPorts = [ 9993 ];
+          allowedUDPPorts = [ 9993 ];
           enable = true;
       };
   };
@@ -66,6 +68,11 @@
   services.pipewire = {
       enable = true;
       wireplumber.enable = true;
+  };
+
+  services.zerotierone = {
+      enable = true;
+      joinNetworks = [ "56374AC9A44F65A1" ];
   };
 
   hardware.bluetooth.enable = true;

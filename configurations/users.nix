@@ -5,12 +5,12 @@
     shell = pkgs.fish;
     extraGroups = [ "wheel" "libvirtd" ]; 
     packages = with pkgs; [
+      SDL2
       librewolf
       firefox
       ungoogled-chromium
       pass-wayland
       gnome.nautilus
-      webcord
       kdePackages.kdeconnect-kde
       nextcloud-client
       logseq
@@ -18,6 +18,7 @@
       libreoffice-fresh
       element-desktop
       kdePackages.okular
+      nuclear
       vlc
       qview
       rnote
@@ -42,6 +43,7 @@
       tldr
       tmux
       stow
+      acpi
     ];
   };
 }

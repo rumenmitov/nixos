@@ -2,11 +2,17 @@
 {
   programs.fish.enable = true;
 
+  nixpkgs.config.allowUnfree = true;
+
   environment.systemPackages = with pkgs; [
+    pavucontrol
     alacritty
     brightnessctl
     btop
     cabal-install
+    cargo
+    rustc
+    nodejs
     clang-tools
     cmake
     curl
