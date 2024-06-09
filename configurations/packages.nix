@@ -5,14 +5,11 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    pavucontrol
     alacritty
     brightnessctl
     btop
     cabal-install
     cargo
-    rustc
-    nodejs
     clang-tools
     cmake
     curl
@@ -43,16 +40,19 @@
     man-pages
     man-pages-posix
     meson
+    nil
+    nodejs
     pamixer
+    pavucontrol
     pinentry-qt
     polkit
     rofi
     rofi-pass
+    rustc
     rustup
     sddm
     shutter
     unzip
-    nil
     vim 
     virtiofsd
     wget
@@ -60,6 +60,7 @@
     xdg-desktop-portal
     xdg-desktop-portal-gtk
     xdg-utils
+    xorg.xhost
     xmobar
     xwallpaper
   ];

@@ -72,7 +72,6 @@
 
   services.zerotierone = {
       enable = true;
-      joinNetworks = [ "56374AC9A44F65A1" ];
   };
 
   hardware.bluetooth.enable = true;
