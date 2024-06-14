@@ -61,6 +61,7 @@
     xdg-desktop-portal-gtk
     xdg-utils
     xorg.xhost
+    xorg.xkill
     xmobar
     xwallpaper
   ];

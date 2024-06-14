@@ -17,7 +17,7 @@
       joplin-desktop
       libreoffice-fresh
       element-desktop
-      kdePackages.okular
+      papers
       nuclear
       vlc
       qview
