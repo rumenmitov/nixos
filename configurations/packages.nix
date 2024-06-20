@@ -41,6 +41,7 @@
     man-pages-posix
     meson
     nil
+    nitrogen
     nodejs
     pamixer
     pavucontrol
@@ -63,6 +64,5 @@
     xorg.xhost
     xorg.xkill
     xmobar
-    xwallpaper
   ];
 }

@@ -9,7 +9,7 @@
       librewolf
       firefox
       ungoogled-chromium
-      pass-wayland
+      pass
       gnome.nautilus
       kdePackages.kdeconnect-kde
       nextcloud-client
@@ -30,6 +30,7 @@
       # Emacs
       emacs-gtk
       ghostscript
+      ispell
 
       # Terminal
       fish
