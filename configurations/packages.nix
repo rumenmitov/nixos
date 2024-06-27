@@ -5,56 +5,35 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    alacritty
+    # System
     brightnessctl
     btop
-    cabal-install
-    cargo
-    clang-tools
-    cmake
     curl
-    dbus
     dunst
     ffmpeg
     file
-    gcc
-    gdb
-    ghc
-    gimp
-    git
     glib
     glibc
-    gnumake
-    go
-    gopls
+    dbus
     hackgen-nf-font
-    haskell-language-server
-    haskellPackages.greenclip
     i3lock
+    haskellPackages.greenclip
     imagemagick
     libnotify
     libsForQt5.qt5.qtgraphicaleffects
     lsof
-    lua-language-server
     man-db
     man-pages
     man-pages-posix
-    meson
-    nil
     nitrogen
-    nodejs
     pamixer
     pavucontrol
     pinentry-qt
     polkit
-    rofi
-    rofi-pass
-    rustc
-    rustup
+    dmenu
     sddm
     shutter
     unzip
-    vim 
     virtiofsd
     wget
     xclip
@@ -64,5 +43,29 @@
     xorg.xhost
     xorg.xkill
     xmobar
+    alacritty
+    vim 
+
+
+    # Programming
+    cabal-install
+    cargo
+    clang-tools
+    cmake
+    gcc
+    gdb
+    ghc
+    git
+    gnumake
+    go
+    gopls
+    haskell-language-server
+    lua-language-server
+    meson
+    nil
+    nodejs
+    rustc
+    rustup
+
   ];
 }

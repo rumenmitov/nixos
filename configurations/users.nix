@@ -5,7 +5,7 @@
     shell = pkgs.fish;
     extraGroups = [ "wheel" "libvirtd" ]; 
     packages = with pkgs; [
-      SDL2
+      # Applications
       librewolf
       firefox
       ungoogled-chromium
@@ -22,6 +22,7 @@
       vlc
       qview
       rnote
+      gimp
 
       # Neovim
       neovim
@@ -40,6 +41,7 @@
       bat
       tty-clock
       podman
+      docker
       docker-compose
       tldr
       tmux

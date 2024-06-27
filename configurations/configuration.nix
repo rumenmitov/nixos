@@ -50,6 +50,10 @@
           theme = "${import ./sddm-theme.nix {inherit pkgs;} }";
   };
 
+  services.gnome.gnome-keyring.enable = true;
+
+  security.pam.services.sddm.enableGnomeKeyring = true;
+
   services.xserver = {
     enable = true;
     excludePackages = [ pkgs.xterm ];
