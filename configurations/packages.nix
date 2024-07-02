@@ -1,7 +1,13 @@
 { pkgs, ... }:
 {
   programs.fish.enable = true;
-  programs.zsh.enable = true;
+  programs.zsh = {
+      enable = true;
+      autosuggestions = {
+          enable = true;
+          strategy = [ "completion" "history" ];
+      };
+  };
 
   nixpkgs.config.allowUnfree = true;
 
@@ -67,6 +73,7 @@
     nodejs
     rustc
     rustup
+    python3
 
   ];
 }
