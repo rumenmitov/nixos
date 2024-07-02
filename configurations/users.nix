@@ -2,8 +2,8 @@
 {
   users.users.rumen = {
     isNormalUser = true;
-    shell = pkgs.fish;
-    extraGroups = [ "wheel" "libvirtd" ]; 
+    shell = pkgs.zsh;
+    extraGroups = [ "wheel" "libvirtd" "networkmanager" ]; 
     packages = with pkgs; [
       # Applications
       librewolf
@@ -34,7 +34,6 @@
       ispell
 
       # Terminal
-      fish
       lsd
       tree
       ripgrep
@@ -47,6 +46,8 @@
       tmux
       stow
       acpi
+      rm-improved
+      zoxide
     ];
   };
 }
