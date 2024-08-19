@@ -10,7 +10,7 @@
       firefox
       ungoogled-chromium
       pass
-      gnome.nautilus
+      nautilus
       kdePackages.kdeconnect-kde
       nextcloud-client
       logseq
@@ -23,6 +23,7 @@
       qview
       rnote
       gimp
+      wireguard-tools
 
       # Neovim
       neovim

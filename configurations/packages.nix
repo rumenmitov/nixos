@@ -5,7 +5,7 @@
       enable = true;
       autosuggestions = {
           enable = true;
-          strategy = [ "completion" "history" ];
+          strategy = [ "history" "completion" ];
       };
   };
 
@@ -74,6 +74,7 @@
     rustc
     rustup
     python3
+    nixfmt-classic
 
   ];
 }

@@ -21,16 +21,44 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  nix.gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 30d";
+  };
+
+  nixpkgs.config.permittedInsecurePackages = [
+                "electron-27.3.11"
+              ];
+
   powerManagement.enable = true;
 
   networking = {
       hostName = "black-eagle";
       networkmanager.enable = true;  
       firewall = {
-          allowedTCPPorts = [ 9993 ];
-          allowedUDPPorts = [ 9993 ];
+          allowedTCPPorts = [ 22 51820 ];
+          allowedUDPPorts = [ 22 51820 ];
           enable = true;
+          checkReversePath = false; 
       };
+
+       wireguard.interfaces = {
+           wg0 = {
+               ips = [ "10.5.5.0/32" ];
+               listenPort = 51820;
+               mtu = 1320;
+               privateKeyFile = "/etc/nixos/secrets/wireguard/private";
+               peers = [
+               {
+                   publicKey = "EKRg8L2/7irwTnGYYJR4zEazRM0/N37pS7XXFWXaAjs=";
+                   allowedIPs = [ "0.0.0.0/0" ];
+                   endpoint = "rumenmitov.duckdns.org:51820"; 
+                   persistentKeepalive = 25;
+               }
+               ];
+           };
+       };
   };
 
   time.timeZone = "Europe/Luxembourg";
@@ -64,18 +92,20 @@
     };
   };
 
+  services.openvpn.servers = {
+    officeVPN  = { 
+        config = '' config /home/rumen/Downloads/constr.ovpn ''; 
+        updateResolvConf = true;
+    };
+  };
+
   services.printing.enable = true;
 
-  sound.enable = true;
   hardware.pulseaudio.enable = true;
 
   services.pipewire = {
       enable = true;
       wireplumber.enable = true;
-  };
-
-  services.zerotierone = {
-      enable = true;
   };
 
   hardware.bluetooth.enable = true;
