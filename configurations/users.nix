@@ -13,10 +13,8 @@
       nautilus
       kdePackages.kdeconnect-kde
       nextcloud-client
-      logseq
       joplin-desktop
       libreoffice-fresh
-      element-desktop
       papers
       nuclear
       vlc

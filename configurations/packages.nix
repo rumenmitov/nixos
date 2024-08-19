@@ -23,8 +23,6 @@
     glibc
     dbus
     hackgen-nf-font
-    i3lock
-    haskellPackages.greenclip
     imagemagick
     libnotify
     libsForQt5.qt5.qtgraphicaleffects
@@ -32,26 +30,26 @@
     man-db
     man-pages
     man-pages-posix
-    nitrogen
     pamixer
     pavucontrol
     pinentry-qt
     polkit
-    dmenu
     sddm
-    shutter
     unzip
     virtiofsd
     wget
-    xclip
     xdg-desktop-portal
     xdg-desktop-portal-gtk
     xdg-utils
-    xorg.xhost
-    xorg.xkill
-    xmobar
     alacritty
     vim 
+    wl-clipboard
+    rofi
+    hyprlock
+    swww
+    cliphist
+    grim
+    slurp
 
 
     # Programming

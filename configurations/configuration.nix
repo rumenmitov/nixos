@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   imports =
@@ -27,41 +27,27 @@
       options = "--delete-older-than 30d";
   };
 
-  nixpkgs.config.permittedInsecurePackages = [
-                "electron-27.3.11"
-              ];
-
   powerManagement.enable = true;
 
   networking = {
       hostName = "black-eagle";
       networkmanager.enable = true;  
       firewall = {
-          allowedTCPPorts = [ 22 51820 ];
-          allowedUDPPorts = [ 22 51820 ];
+          allowedTCPPorts = [ 22 ];
+          allowedUDPPorts = [ 22 ];
           enable = true;
-          checkReversePath = false; 
       };
-
-       wireguard.interfaces = {
-           wg0 = {
-               ips = [ "10.5.5.0/32" ];
-               listenPort = 51820;
-               mtu = 1320;
-               privateKeyFile = "/etc/nixos/secrets/wireguard/private";
-               peers = [
-               {
-                   publicKey = "EKRg8L2/7irwTnGYYJR4zEazRM0/N37pS7XXFWXaAjs=";
-                   allowedIPs = [ "0.0.0.0/0" ];
-                   endpoint = "rumenmitov.duckdns.org:51820"; 
-                   persistentKeepalive = 25;
-               }
-               ];
-           };
-       };
   };
 
   time.timeZone = "Europe/Luxembourg";
+
+  # Hyprland
+  programs.hyprland = {
+      enable = true;
+      xwayland.enable = true;
+  };
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  programs.dconf.enable = true;
 
   xdg.portal = {
     enable = true;
@@ -69,28 +55,17 @@
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
 
-  services.picom = {
-      enable = true;
-  };
-
   services.displayManager.sddm = {
           enable = true;
           theme = "${import ./sddm-theme.nix {inherit pkgs;} }";
+          wayland.enable = true;
   };
 
   services.gnome.gnome-keyring.enable = true;
 
-  security.pam.services.sddm.enableGnomeKeyring = true;
+  security.polkit.enable = true;
 
-  services.xserver = {
-    enable = true;
-    excludePackages = [ pkgs.xterm ];
-    videoDrivers = [ "amdgpu" ];
-    windowManager.xmonad = {
-       enable = true;
-       enableContribAndExtras = true;
-    };
-  };
+  security.pam.services.sddm.enableGnomeKeyring = true;
 
   services.openvpn.servers = {
     officeVPN  = { 
