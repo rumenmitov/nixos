@@ -32,7 +32,7 @@
     man-pages-posix
     pamixer
     pavucontrol
-    pinentry-qt
+    pinentry-gnome3
     polkit
     sddm
     unzip
@@ -44,12 +44,14 @@
     alacritty
     vim 
     wl-clipboard
+    wlroots
     rofi
     hyprlock
     swww
     cliphist
     grim
     slurp
+    pyprland
 
 
     # Programming
@@ -73,6 +75,7 @@
     rustup
     python3
     nixfmt-classic
-
+    php
+    phpactor
   ];
 }

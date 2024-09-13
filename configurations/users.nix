@@ -10,6 +10,7 @@
       firefox
       ungoogled-chromium
       pass
+      rofi-pass-wayland
       nautilus
       kdePackages.kdeconnect-kde
       nextcloud-client
@@ -22,6 +23,8 @@
       rnote
       gimp
       wireguard-tools
+      gpt4all
+      pandoc
 
       # Neovim
       neovim

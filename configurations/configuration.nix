@@ -69,14 +69,15 @@
 
   services.openvpn.servers = {
     officeVPN  = { 
-        config = '' config /home/rumen/Downloads/constr.ovpn ''; 
+        config = '' config /home/rumen/Other/Nextcloud/PhantomOS/constr.ovpn ''; 
         updateResolvConf = true;
+        extraArgs = [""];
     };
   };
 
   services.printing.enable = true;
 
-  hardware.pulseaudio.enable = true;
+  hardware.pulseaudio.enable = false;
 
   services.pipewire = {
       enable = true;
@@ -97,7 +98,14 @@
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
-    pinentryPackage = pkgs.pinentry-qt;
+    pinentryPackage = pkgs.pinentry-gnome3;
+  };
+
+  programs.steam = {
+      enable = true;
+      remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+          dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+          localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
   };
 
   services.openssh.enable = true;
