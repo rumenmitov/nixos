@@ -41,17 +41,18 @@
     xdg-desktop-portal
     xdg-desktop-portal-gtk
     xdg-utils
-    alacritty
+    st
     vim 
-    wl-clipboard
-    wlroots
-    rofi
-    hyprlock
-    swww
-    cliphist
-    grim
-    slurp
-    pyprland
+    dmenu
+    shutter
+    xclip
+    xorg.xhost
+    xorg.xkill
+    xmobar
+    nitrogen
+    haskellPackages.greenclip
+    i3lock
+    xorg.xrandr
 
 
     # Programming

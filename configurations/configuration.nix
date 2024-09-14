@@ -41,11 +41,6 @@
 
   time.timeZone = "Europe/Luxembourg";
 
-  # Hyprland
-  programs.hyprland = {
-      enable = true;
-      xwayland.enable = true;
-  };
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
   programs.dconf.enable = true;
 
@@ -58,14 +53,25 @@
   services.displayManager.sddm = {
           enable = true;
           theme = "${import ./sddm-theme.nix {inherit pkgs;} }";
-          wayland.enable = true;
   };
+
+  services.picom.enable = true;
 
   services.gnome.gnome-keyring.enable = true;
 
   security.polkit.enable = true;
 
   security.pam.services.sddm.enableGnomeKeyring = true;
+
+  services.xserver = {
+    enable = true;
+    excludePackages = [ pkgs.xterm ];
+    videoDrivers = [ "amdgpu" ];
+    windowManager.xmonad = {
+       enable = true;
+       enableContribAndExtras = true;
+    };
+  };
 
   services.openvpn.servers = {
     officeVPN  = { 
@@ -79,15 +85,14 @@
 
   hardware.pulseaudio.enable = false;
 
-  services.pipewire = {
-      enable = true;
-      wireplumber.enable = true;
-  };
-
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
 
   hardware.opentabletdriver.enable = true;
+
+  hardware.graphics.enable = true;
+  hardware.graphics.extraPackages = [ pkgs.mesa.drivers ];
+  hardware.amdgpu.amdvlk.enable = true;
 
   services.udev.extraRules = "";
 
